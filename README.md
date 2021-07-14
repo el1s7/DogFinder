@@ -1,5 +1,26 @@
 # DogFinder
 
+Find dog breed family and view similar photos, powered by TensorflowJS.
+
+This project was made as an assignment for https://ridedott.com/
+
+## Design Choices
+
+#### UI
+
+The UI is simple, responsive and looks nice.
+
+I decided to go with a Masonry layot for displaying gallery images since it
+looks cooler and preserves the image height.
+
+#### Dependencies
+
+Both are my own libraries:
+
+-   https://github.com/elementz-ui/elementz an UI library, used for Input
+    element, Icons and Spinner.
+-   https://github.com/el1s7/rested an API manager module.
+
 ## Installation
 
 The first step is to clone this repository and run `yarn install`
