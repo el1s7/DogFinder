@@ -1,43 +1,112 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "dog-finder",
+  "description": "Find the relatives of your dog",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@tensorflow-models/mobilenet": "^2.1.0",
+    "@tensorflow/tfjs": "^3.7.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^26.0.24",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "elementz": "^2.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-masonry-css": "^1.0.16",
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "wrape": "^1.2.71"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "types": "tsc --noEmit",
+    "husky:lint-staged": "lint-staged",
+    "husky:pre-commit": "run-p husky:lint-staged",
+    "lint": "eslint --resolve-plugins-relative-to \"./node_modules/@ridedott/eslint-config\" \"**/*.ts\"",
+    "fix": "eslint --fix --resolve-plugins-relative-to \"./node_modules/@ridedott/eslint-config\" \"**/*.ts\""
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "@ridedott/eslint-config"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "./src/**/*spec.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/no-magic-numbers": "off"
+        }
+      }
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "rules": {
+      "unicorn/filename-case": "off",
+      "jest/unbound-method": "off",
+      "immutable/no-mutation": "off",
+      "immutable/no-this": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "capitalized-comments": "off",
+      "import/no-default-export": "off",
+      "unicorn/prefer-query-selector": "off",
+      "@typescript-eslint/strict-boolean-expressions": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "multiline-comment-style": "off",
+      "unicorn/prevent-abbreviations": "off",
+      "func-style": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-unused-vars": "off",
+      "id-length": "off",
+      "unicorn/consistent-function-scoping": "off",
+      "prefer-destructuring": "off",
+      "prefer-promise-reject-errors": "off",
+      "no-console": "off",
+      "@typescript-eslint/member-ordering": "off",
+      "new-cap": "off",
+      "@typescript-eslint/prefer-nullish-coalescing": "off",
+      "max-len": "off",
+      "no-implicit-coercion": "off",
+      "no-bitwise": "off",
+	  "@typescript-eslint/no-magic-numbers": "off",
+	  "immutable/no-let": "off",
+	  "no-continue": "off"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix --resolve-plugins-relative-to \"./node_modules/@ridedott/eslint-config\""
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run husky:pre-commit"
+    }
+  },
+  "devDependencies": {
+    "@ridedott/eslint-config": "^2.14.5",
+    "autoprefixer": "^10.3.1",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "npm-run-all": "^4.1.5",
+    "react-test-renderer": "^17.0.2",
+    "sass": "^1.35.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-order": "^4.1.0"
   }
 }

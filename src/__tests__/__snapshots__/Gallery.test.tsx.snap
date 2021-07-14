@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gallery images render correctly 1`] = `
+Array [
+  <h2
+    className="mb-20 ez-text"
+  >
+    Here are some more doggos like yours
+  </h2>,
+  <div
+    className="gallery"
+  >
+    <div
+      className="gallery-column"
+      style={
+        Object {
+          "width": "33.333333333333336%",
+        }
+      }
+    >
+      <div
+        className="gallery-item"
+      >
+        <div
+          className="gallery-image"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            loading="lazy"
+            src="/akita.png"
+          />
+        </div>
+        <div
+          className="preview-container"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            src="/akita.png"
+          />
+          <div
+            className="preview-close"
+            onClick={[Function]}
+          >
+            <i
+              className="zwicon-close"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="gallery-item"
+      >
+        <div
+          className="gallery-image"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            loading="lazy"
+            src="/prancer.jpg"
+          />
+        </div>
+        <div
+          className="preview-container"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            src="/prancer.jpg"
+          />
+          <div
+            className="preview-close"
+            onClick={[Function]}
+          >
+            <i
+              className="zwicon-close"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="gallery-column"
+      style={
+        Object {
+          "width": "33.333333333333336%",
+        }
+      }
+    >
+      <div
+        className="gallery-item"
+      >
+        <div
+          className="gallery-image"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            loading="lazy"
+            src="/rottweiler.jpg"
+          />
+        </div>
+        <div
+          className="preview-container"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            src="/rottweiler.jpg"
+          />
+          <div
+            className="preview-close"
+            onClick={[Function]}
+          >
+            <i
+              className="zwicon-close"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="gallery-column"
+      style={
+        Object {
+          "width": "33.333333333333336%",
+        }
+      }
+    >
+      <div
+        className="gallery-item"
+      >
+        <div
+          className="gallery-image"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            loading="lazy"
+            src="/golden.jpg"
+          />
+        </div>
+        <div
+          className="preview-container"
+          onClick={[Function]}
+        >
+          <img
+            alt="A dog"
+            src="/golden.jpg"
+          />
+          <div
+            className="preview-close"
+            onClick={[Function]}
+          >
+            <i
+              className="zwicon-close"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

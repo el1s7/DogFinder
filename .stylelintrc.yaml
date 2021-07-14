@@ -1,0 +1,27 @@
+extends:
+  - stylelint-config-standard
+  - stylelint-config-prettier
+plugins:
+  - stylelint-order
+rules:
+  at-rule-no-vendor-prefix: true
+  color-named: never
+  declaration-no-important: true
+  font-family-name-quotes: always-unless-keyword
+  font-weight-notation: numeric
+  function-url-quotes: always
+  media-feature-name-no-vendor-prefix: true
+  order/order:
+    - custom-properties
+    - declarations
+    - at-rules
+    - rules
+  order/properties-alphabetical-order: true
+  property-no-vendor-prefix: true
+  selector-attribute-quotes: always
+  selector-no-vendor-prefix: true
+  selector-type-no-unknown:
+    - true
+    - ignore:
+        - custom-elements
+  value-no-vendor-prefix: true

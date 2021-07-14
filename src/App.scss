@@ -1,0 +1,227 @@
+body {
+	overflow-x: hidden;
+}
+.header {
+	height: 30vh;
+	min-height: 300px;
+	max-height: 300px;
+	background: linear-gradient(35deg, #913ed0, #0cc5bd);
+	color: #fff;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	padding: 20px;
+	padding-bottom: 80px;
+	box-shadow: inset 1px -10px 10px rgba(0, 0, 0, 0.01);
+	&.loading {
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 8px;
+			--bar: rgba(0, 0, 0, 0.2);
+			--track: #4ef1f3;
+			background: linear-gradient(
+				90deg,
+				var(--bar) 40%,
+				var(--track),
+				var(--bar) 60%
+			);
+			background-size: 250% 100%;
+			background-position: 100% 100%;
+			animation: bar-loading 1.8s infinite ease-in-out;
+		}
+	}
+	.upload {
+		position: absolute;
+		bottom: 0;
+		transform: translateY(50%);
+		width: 200px;
+		height: 200px;
+		background-color: var(--background-light);
+		border-radius: 0.5rem;
+		overflow: hidden;
+		box-shadow: -1px 5px 15px 8px rgba(0, 0, 0, 0.1);
+		z-index: 5;
+		.upload-empty,
+		.upload-wrapper {
+			height: 100%;
+			width: 100%;
+		}
+		.upload-empty {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: rgba(var(--text-code), 0.5);
+			border: 2px dashed rgba(var(--text-code), 0.5);
+			transition: 0.15s;
+			i {
+				font-size: 5em !important;
+			}
+			&:hover {
+				color: var(--text);
+				border-color: var(--text);
+			}
+		}
+		.upload-wrapper {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			&:after {
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	.breed-name {
+		display: flex;
+		align-items: center;
+
+		.probability {
+			padding-left: 5px !important;
+			margin-left: 10px;
+			padding-right: 5px !important;
+		}
+	}
+}
+.body {
+	padding: 20px;
+	padding-top: 150px;
+	text-align: center;
+
+	.gallery {
+		display: -webkit-box; /* Not needed if autoprefixing */
+		display: -ms-flexbox; /* Not needed if autoprefixing */
+		display: flex;
+		margin-left: -30px; /* gutter size offset */
+		width: auto;
+		.gallery-column {
+			padding-left: 30px; /* gutter size */
+			background-clip: padding-box;
+
+			.gallery-item {
+				position: relative;
+				margin-bottom: 30px;
+
+				.gallery-image {
+					img {
+						cursor: pointer;
+						width: 100%;
+					}
+				}
+
+				.preview-container {
+					display: none;
+					position: fixed;
+					z-index: 10;
+					top: 0;
+					right: 0;
+					left: 0;
+					bottom: 0;
+					padding: 10%;
+					background: rgba(0, 0, 0, 0.5);
+					img {
+						height: 100%;
+						width: auto;
+						max-width: 100%;
+						object-fit: contain;
+					}
+					.preview-close {
+						position: fixed;
+						top: 20px;
+						right: 20px;
+						z-index: 11;
+						cursor: pointer;
+						i {
+							font-size: 50px;
+							color: #fff;
+						}
+					}
+				}
+
+				&.preview {
+					.preview-container {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.spinner {
+		width: 100%;
+		padding: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.empty {
+		& > img {
+			max-width: 120px;
+		}
+		.samples {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 700px;
+			width: 100%;
+			margin: 15px auto;
+			overflow: hidden;
+			border-radius: 0.5rem;
+			.sample {
+				width: calc(100% / 4);
+				overflow: hidden;
+				cursor: pointer;
+
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					transform: scale(1);
+					transition: 0.2s;
+				}
+				&:hover img {
+					transform: scale(1.1);
+				}
+			}
+		}
+		&.disabled {
+			pointer-events: initial;
+			.samples .sample {
+				cursor: not-allowed;
+			}
+		}
+	}
+}
+
+.github {
+	position: absolute;
+	top: 45px;
+	right: -170px;
+	color: #fff;
+	background: rgb(0 0 0 / 35%);
+	padding: 10px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	text-decoration: none;
+	transform: rotateZ(45deg);
+	img {
+		margin-right: 5px;
+	}
+}
+
+@keyframes bar-loading {
+	100% {
+		background-position: 0% 100%;
+	}
+}

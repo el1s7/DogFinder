@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`main app renders correctly 1`] = `
+<div
+  className="main"
+>
+  <div
+    className="header loading"
+  >
+    <h1
+      className="mb-10"
+    >
+      What's my dog breed?
+    </h1>
+    <h2
+      className="breed-name"
+    >
+      
+    </h2>
+    <div
+      className="upload"
+      title="Loading AI model..."
+    >
+      <div
+        className="ez-input-element input-file h-100 disabled auto"
+        onClick={[Function]}
+      >
+        <input
+          className="ez-input disabled auto ez-input-wrapped"
+          disabled={true}
+          onChange={[Function]}
+          onKeyDown={[Function]}
+          type="file"
+        />
+        <div
+          className="upload-empty"
+        >
+          <i
+            className="zwicon-cloud-upload"
+          />
+        </div>
+      </div>
+    </div>
+    <a
+      className="github"
+      href="https://github.com/el1s7/DogFinder"
+      target="_blank"
+    >
+      <img
+        src="/github.jpg"
+        width="32px"
+      />
+      Star me on Github
+    </a>
+  </div>
+  <div
+    className="body"
+  >
+    <div
+      className="empty disabled"
+    >
+      <img
+        src="/logo.png"
+      />
+      <h1>
+        Find your dog breed & view his relatives
+      </h1>
+      <h3>
+        Upload a picture of your dog or select a sample below
+      </h3>
+      <div
+        className="samples"
+      >
+        <div
+          className="sample"
+        >
+          <img
+            onClick={[Function]}
+            src="/golden.jpg"
+          />
+        </div>
+        <div
+          className="sample"
+        >
+          <img
+            onClick={[Function]}
+            src="/rottweiler.jpg"
+          />
+        </div>
+        <div
+          className="sample"
+        >
+          <img
+            onClick={[Function]}
+            src="/akita.png"
+          />
+        </div>
+        <div
+          className="sample"
+        >
+          <img
+            onClick={[Function]}
+            src="/prancer.jpg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

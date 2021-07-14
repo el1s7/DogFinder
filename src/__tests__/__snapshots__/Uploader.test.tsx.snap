@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly empty uploader 1`] = `
+<div
+  className="ez-input-element input-file h-100 auto"
+  onClick={[Function]}
+>
+  <input
+    className="ez-input auto ez-input-wrapped"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    type="file"
+  />
+  <div
+    className="upload-empty"
+  >
+    <i
+      className="zwicon-cloud-upload"
+    />
+  </div>
+</div>
+`;
+
+exports[`renders correctly uploaded image 1`] = `
+<div
+  className="ez-input-element input-file h-100 auto"
+  onClick={[Function]}
+>
+  <input
+    className="ez-input auto ez-input-wrapped"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    type="file"
+  />
+  <div
+    className="upload-wrapper upload-overlay"
+  >
+    <img
+      alt="Your dog"
+      onError={[Function]}
+      src="/akita.jpg"
+    />
+  </div>
+</div>
+`;

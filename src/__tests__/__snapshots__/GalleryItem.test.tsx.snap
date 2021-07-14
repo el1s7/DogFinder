@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders gallery item correctly 1`] = `
+<div
+  className="gallery-item"
+>
+  <div
+    className="gallery-image"
+    onClick={[Function]}
+  >
+    <img
+      alt="A dog"
+      loading="lazy"
+      src="/akita.jpg"
+    />
+  </div>
+  <div
+    className="preview-container"
+    onClick={[Function]}
+  >
+    <img
+      alt="A dog"
+      src="/akita.jpg"
+    />
+    <div
+      className="preview-close"
+      onClick={[Function]}
+    >
+      <i
+        className="zwicon-close"
+      />
+    </div>
+  </div>
+</div>
+`;

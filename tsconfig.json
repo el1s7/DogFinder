@@ -1,26 +1,47 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "charset": "utf-8",
+    "declaration": false,
+    "declarationMap": false,
+    "importHelpers": true,
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "DOM",
+      "DOM.Iterable",
+      "ES2019"
     ],
+    "noImplicitAny": true,
+    "noImplicitReturns": false,
+    "noUnusedLocals": false,
+    "jsx": "react-jsx",
+    "noUnusedParameters": true,
+    "pretty": true,
+    "rootDir": "src",
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "es2019",
+    "typeRoots": [
+      "./@types",
+      "node_modules/@types"
+    ],
+    "experimentalDecorators": true,
+    "incremental": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "tsBuildInfoFile": "./.cache/typescript",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "module": "esnext"
   },
   "include": [
-    "src"
+    "src",
+    "@types"
   ]
 }
