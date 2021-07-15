@@ -1,4 +1,6 @@
-body {
+body,
+#root,
+.main {
 	overflow-x: hidden;
 }
 .header {
@@ -217,6 +219,12 @@ body {
 	transform: rotateZ(45deg);
 	img {
 		margin-right: 5px;
+	}
+}
+
+@media (max-width: 768px) {
+	.github {
+		display: none;
 	}
 }
 

@@ -1,15 +1,17 @@
 import { exception } from 'console';
+
 import API from '../Helpers/api';
 
-test('dog.ceo get breed images API is working', () => {
+it('dog.ceo get breed images API is working', async () => {
 	expect.hasAssertions();
 
+	// eslint-disable-next-line jest/no-test-return-statement
 	return API.dogCeo.random({
 		breed: 'retriever',
-		subbreed: 'golden',
-		limit: 5
+		limit: 5,
+		subbreed: 'golden'
 	}).then(data => {
-	  expect(data.status).toBe('success');
-	  expect(data.message.length).toBe(5);
-	});
+		expect(data.status).toBe('success');
+		expect(data.message).toHaveLength(5);
+	})
 });
